@@ -1,0 +1,113 @@
+*** DAY 04 ***
+
+STARTING TIPS
+________________________________________________________________________________________________
+
+/// WEB.PHP CODING ////
+
+
+Route::get('/edit/{id}',[ContactController::class,'edit'])->name('edit');
+
+------------------------------------------------------------------------------------------------
+
+IF YOU SPECIFY THE ROUTE WITH A NAME LIKE ABOVE ->NAME STUFF,THEN WHENEVER WE USE THAT ROUTE WE CAN USE THAT.
+
+USE OF THAT,
+
+	WE CAN USE DIFFERENT DIFFERENT WORKS WITH SAME URL OR WITHOUT CHANGING THE URL.
+
+
+
+///// INDEX.PHP EDIT BUTTON CODING /////
+
+<a href="{{ route('edit',['id'=>$contact->id]) }}" class="btn btn-primary">Edit</a>
+
+
+
+_____________________________________________________________________________________________________________
+
+NEW PROJECT START....
+
+1. CREATE PROJECT ESTORE
+________________________________________________________________
+
+2. php artisan make:model Product --migration
+
+_____________________________________________________________________
+
+3.in migration table "create_product_table " we have to define field name.
+
+	public function up()
+    {
+        Schema::create('products', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $tabel->string('detail');
+            $table->timestamps();
+        });
+    }
+
+____________________________________________________________________________
+
+4. php artisan migrate:fresh
+
+it will drop all the tables from database and migrate again as fresh.
+it will help when you create anything wrongly in table.
+
+_________________________________________________________________________________
+
+5. php artisan make:controller  ProductController --resource --model=Product
+
+when you create without --resource it will create a function with only $id .
+but if you use this also it will create with name of product.
+
+________________________________________________________________________________
+
+6.shorturl.at/jntAU
+
+
+for UI coding template
+
+
+_____________________________________________________________________________________
+
+7.route to index file and all are working correctly
+
+
+
+__________________________________________________________________________________________
+
+8. php artisan route:list
+
+it will shows all the existing routes on the projects
+
+______________________________________________________________________________________________
+
+
+9.Route:resource('products',ProductController::class);
+
+this will help to reduce the workload .
+all the routes will be created with one command.
+we can see the routes with code route:list.
+
+
+______________________________________________________________________________________________
+
+
+10.
+we have to see every routes came from list code and according to that we have to add ' href on buttons '  and  ' actions
+on form'
+
+IMPORTANT NOTE :: 'IF YOU GOT PAGE EXPIRED ERROR THEN YOU MISSED TO PUT @csrf ON THE FORM CAREFUL.
+
+
+after edit every routes on every create edit other files.
+then go to productcontroller and on respective functions you have to add coding as mentioned.
+
+
+_________________________________________________________________________________________________________
+
+11.
+
+
+
