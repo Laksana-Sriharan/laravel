@@ -1,0 +1,158 @@
+C:\2019CSC045>git clone https://github.com/Laksana-Sriharan/E-Store-App.git
+
+Cloning into 'E-Store-App'...
+info: please complete authentication in your browser...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+Receiving objects: 100% (3/3), done.
+
+
+C:\2019CSC045>cd E-Store-App
+
+C:\2019CSC045\E-Store-App>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\2019CSC045\E-Store-App>git branch
+* main
+
+// After Creating a new file it is not tracked
+
+C:\2019CSC045\E-Store-App>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Sample.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+//To make Sample.txt tracked.....
+
+C:\2019CSC045\E-Store-App>git add Sample.txt
+
+
+//Now check status 
+
+C:\2019CSC045\E-Store-App>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Sample.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+	
+// To commit a file
+
+C:\2019CSC045\E-Store-App>git commit -m "Sample file added"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'ADMIN@DESKTOP-AP7G9LH.(none)')
+
+// Configuring your identity
+
+C:\2019CSC045\E-Store-App>git config --global user.email laksana.sriharan@gmail.com
+
+C:\2019CSC045\E-Store-App>git config --global user.name Laksana-Sriharan
+
+// Now add files
+
+C:\2019CSC045\E-Store-App>git commit -m "Sample file added"
+[main eaa9a5e] Sample file added
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Sample.txt
+
+//Transmit filed to repository
+ 
+C:\2019CSC045\E-Store-App>git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 309 bytes | 309.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Laksana-Sriharan/E-Store-App.git
+   48613e3..eaa9a5e  main -> main
+   
+C:\2019CSC045\E-Store-App>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+        modified:   Sample.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+// To add All files together without specifyong each filename
+
+C:\2019CSC045\E-Store-App>git add                     // Should add a dot in the end
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+
+// To add All files together without specifyong each filename
+C:\2019CSC045\E-Store-App>git add .
+
+C:\2019CSC045\E-Store-App>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+        modified:   Sample.txt
+
+
+//Commit the changes in the files
+
+C:\2019CSC045\E-Store-App>git commit -m "Updated sample and readme"
+[main dba2945] Updated sample and readme
+ 2 files changed, 5 insertions(+), 2 deletions(-)
+
+C:\2019CSC045\E-Store-App>git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 391 bytes | 391.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Laksana-Sriharan/E-Store-App.git
+   eaa9a5e..dba2945  main -> main
+
+   
+// Now check the repository for updations...............................................
+
+// After adding a Project files in .gitignore will not be committed......
