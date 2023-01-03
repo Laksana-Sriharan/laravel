@@ -1,0 +1,538 @@
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045
+$ git init
+Initialized empty Git repository in C:/Users/DCS User/Desktop/2019CSC045/.git/
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (master)
+$ echo "# test">> README.md
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (master)
+$ git commit -m "Readme file added"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'DCS User@DESKTOP-0D662U6.(none)')
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (master)
+$ git config --glogal user.name "Laksana-Sriharan"
+error: unknown option `glogal'
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <type>     value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (master)
+$ git config --global user.name "Laksana-Sriharan"
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (master)
+$ git config --global user.email "laksana.sriharan@gmail.com"
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (master)
+$ git push --set-upstream origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'origin'
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (master)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (master)
+$ git branch -M main
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git push --set-upstream origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'origin'
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git remote add origin https://github.com/laksana-Sriharan/test.git
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git push --set-upstream origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/laksana-Sriharan/test.git'
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git commit -m "Readme file added"
+On branch main
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git add .
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git commit -m "Readme file added"
+[main (root-commit) 7705d23] Readme file added
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git push --set-upstream origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 229 bytes | 229.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Laksana-Sriharan/test.git
+To https://github.com/laksana-Sriharan/test.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ ^C
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ ^C
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ ^C
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ ^C
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ ^C
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git add sum.java
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   sum.java
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Day2 git.txt
+
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git push
+Everything up-to-date
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git add sum.java
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   sum.java
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Day2 git.txt
+
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git push
+Everything up-to-date
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git add sum.java
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   sum.java
+
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git push
+Everything up-to-date
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git commit -M "Sum file added"
+error: unknown switch `M'
+usage: git commit [-a | --interactive | --patch] [-s] [-v] [-u<mode>] [--amend]
+                  [--dry-run] [(-c | -C | --squash) <commit> | --fixup [(amend|reword):]<commit>)]
+                  [-F <file> | -m <msg>] [--reset-author] [--allow-empty]
+                  [--allow-empty-message] [--no-verify] [-e] [--author=<author>]
+                  [--date=<date>] [--cleanup=<mode>] [--[no-]status]
+                  [-i | -o] [--pathspec-from-file=<file> [--pathspec-file-nul]]
+                  [(--trailer <token>[(=|:)<value>])...] [-S[<keyid>]]
+                  [--] [<pathspec>...]
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup [(amend|reword):]commit
+                          use autosquash formatted message to fixup or amend/reword specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    --trailer <trailer>   add custom trailer(s)
+    -s, --signoff         add a Signed-off-by trailer
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --ahead-behind        compute full ahead/behind values
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   sum.java
+
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git push
+Everything up-to-date
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git add sum.java
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git commit -M "Sum file added"
+error: unknown switch `M'
+usage: git commit [-a | --interactive | --patch] [-s] [-v] [-u<mode>] [--amend]
+                  [--dry-run] [(-c | -C | --squash) <commit> | --fixup [(amend|reword):]<commit>)]
+                  [-F <file> | -m <msg>] [--reset-author] [--allow-empty]
+                  [--allow-empty-message] [--no-verify] [-e] [--author=<author>]
+                  [--date=<date>] [--cleanup=<mode>] [--[no-]status]
+                  [-i | -o] [--pathspec-from-file=<file> [--pathspec-file-nul]]
+                  [(--trailer <token>[(=|:)<value>])...] [-S[<keyid>]]
+                  [--] [<pathspec>...]
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup [(amend|reword):]commit
+                          use autosquash formatted message to fixup or amend/reword specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    --trailer <trailer>   add custom trailer(s)
+    -s, --signoff         add a Signed-off-by trailer
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --ahead-behind        compute full ahead/behind values
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git commit -m "Sum file added"
+[main 55b6887] Sum file added
+ 1 file changed, 5 insertions(+)
+ create mode 100644 sum.java
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 339 bytes | 339.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Laksana-Sriharan/test.git
+To https://github.com/laksana-Sriharan/test.git
+   7705d23..55b6887  main -> main
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git pull
+Already up to date.
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 722 bytes | 7.00 KiB/s, done.
+From https://github.com/laksana-Sriharan/test
+   55b6887..35b2df1  main       -> origin/main
+Updating 55b6887..35b2df1
+Fast-forward
+ sum.java | 3 ++-
+
+$ git log
+commit 35b2df16bdf02286cc37142b18f95e826000c363 (HEAD -> main, origin/main)
+Author: Laksana Sriharan <107987128+Laksana-Sriharan@users.noreply.github.com>
+Date:   Tue Jan 3 14:01:00 2023 +0530
+
+    Update sum.java
+
+commit 55b68872cd9e11ea21ca1429eb02582af6aac7c5
+Author: Laksana-Sriharan <laksana.sriharan@gmail.com>
+Date:   Tue Jan 3 14:02:16 2023 +0530
+
+    Sum file added
+
+commit 7705d23ccbd6476ed210d381a46fe378813823db
+Author: Laksana-Sriharan <laksana.sriharan@gmail.com>
+Date:   Tue Jan 3 13:40:12 2023 +0530
+
+    Readme file added
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 723 bytes | 6.00 KiB/s, done.
+From https://github.com/laksana-Sriharan/test
+   35b2df1..92ae7d5  main       -> origin/main
+error: Your local changes to the following files would be overwritten by merge:
+        sum.java
+Please commit your changes or stash them before you merge.
+Aborting
+Updating 35b2df1..92ae7d5
+
+$ git status
+On branch main
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   sum.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git add .
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git commit -m "c added"
+[main baadfc5] c added
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git pull
+Auto-merging sum.java
+CONFLICT (content): Merge conflict in sum.java
+Automatic merge failed; fix conflicts and then commit the result.
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main|MERGING)
+$ git push
+To https://github.com/laksana-Sriharan/test.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/laksana-Sriharan/test.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main|MERGING)
+$ git add .
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main|MERGING)
+$ git commit -m "c added"
+[main 05f6d18] c added
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git push
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 742 bytes | 742.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Laksana-Sriharan/test.git
+To https://github.com/laksana-Sriharan/test.git
+   92ae7d5..05f6d18  main -> main
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        sub.java
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git add sub.java
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git stash -m "important change"
+Saved working directory and index state On main: important change
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git stash list
+stash@{0}: On main: important change
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git stash pop stash@{0}
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   sub.java
+
+Dropped stash@{0} (b9198c0820464c57ee1672497a7276763994eb9c)
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git add .
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git commit -m "sub file added"
+[main 5586364] sub file added
+ 1 file changed, 5 insertions(+)
+ create mode 100644 sub.java
+
+DCS User@DESKTOP-0D662U6 MINGW64 ~/Desktop/2019CSC045 (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 368 bytes | 368.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Laksana-Sriharan/test.git
+To https://github.com/laksana-Sriharan/test.git
+   c61fe2b..5586364  main -> main
+
